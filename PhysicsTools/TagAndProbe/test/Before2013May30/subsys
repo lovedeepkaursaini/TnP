@@ -1,0 +1,12 @@
+farmoutAnalysisJobs --shared-fs --skip-existing-output --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012A-13Jul2012-v1/AOD TnPTreeElec_DoubleElectronRun2012A-13Jul2012-v1_Jan18mediumSYS ~/TnP/CMSSW_5_3_5/ ~/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/SYSfortests2012AB.py 
+
+farmoutAnalysisJobs --shared-fs --skip-existing-output --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012B-13Jul2012-v1/AOD TnPTreeElec_DoubleElectronRun2012B-13Jul2012-v1_Jan18mediumSYS ~/TnP/CMSSW_5_3_5/ ~/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/SYSfortests2012AB.py
+
+farmoutAnalysisJobs --shared-fs --skip-existing-output --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012A-recover-06Aug2012-v1/AOD  TnPTreeElec_DoubleElectronRun2012A-recover-06Aug2012-v1_Jan18mediumSYS ~/TnP/CMSSW_5_3_5/ ~/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/SYSfortests2012Arecover.py
+
+farmoutAnalysisJobs --shared-fs --skip-existing-output --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012C-PromptReco-v2/AOD TnPTreeElec_DoubleElectronRun2012C-PromptReco-v2_Jan18mediumSYS ~/TnP/CMSSW_5_3_5/ ~/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/SYSfortests2012C.py
+
+farmoutAnalysisJobs --shared-fs --skip-existing-output --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012D-PromptReco-v1/AOD TnPTreeElec_DoubleElectronRun2012D-PromptReco-v1_Jan18mediumSYS ~/TnP/CMSSW_5_3_5/ ~/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/SYSfortests2012C.py
+
+farmoutAnalysisJobs --shared-fs --skip-existing-output --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM TnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraphSummer12_DR53X-PU_S10_START53_V7A-v1_Jan18mediumSYS ~/TnP/CMSSW_5_3_5/ ~/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/MCSYSfortests2012AB.py
+

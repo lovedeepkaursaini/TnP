@@ -1,0 +1,3 @@
+
+rootplot rootplot_config.py Hists_TT.root Hists_QCD.root --output=FirstJetTag --draw='hist' --legend-entries='TTH_HToZG_M-125,QCD_Pt-15to3000' --legend-location='upper left' --area-normalize
+

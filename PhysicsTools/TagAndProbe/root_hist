@@ -1,0 +1,30 @@
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.l()
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+TBrowser b
+.q
+TBrowser b
+.q
+TBrowser b
+.q

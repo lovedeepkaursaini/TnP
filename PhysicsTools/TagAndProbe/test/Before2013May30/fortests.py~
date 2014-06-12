@@ -1,0 +1,903 @@
+import FWCore.ParameterSet.Config as cms
+
+from CommonTools.ParticleFlow.Tools.pfIsolation import setupPFElectronIso
+
+process = cms.Process("p")
+
+MC_flag = False
+GLOBAL_TAG = 'GR_R_44_V13::All'
+
+HLTProcessName = "HLT"
+OUTPUT_FILE_NAME = "TnPTree_Data.root"
+
+
+ELECTRON_ET_CUT_MIN = 10.0
+ELECTRON_COLL = "gsfElectrons"
+ELECTRON_CUTS = "(abs(superCluster.eta)<2.5) && pt > 10.0"
+#ELECTRON_CUTS = "(abs(superCluster.eta)<2.5) && (ecalEnergy*sin(superClusterPosition.theta)>" + str(ELECTRON_ET_CUT_MIN) + ")"
+
+
+#########################################################
+#NEUTRAL TRIGGER
+#########################################################
+HLTEle17Mass30Path1 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v1"
+HLTEle17Mass30Path2 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v2"
+HLTEle17Mass30Path3 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v3"
+HLTEle17Mass30Path4 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v4"
+HLTEle17Mass30Path5 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v5"
+HLTEle17Mass30Path6 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v6"
+HLTEle17Mass30Path7 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v7"
+HLTEle17Mass30Path8 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v8"
+HLTEle17Mass30Path9 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v9"
+HLTEle17Mass30Path10 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC8_Mass30_v10"
+HLTEle17Mass30Path11 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v1"
+HLTEle17Mass30Path12 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v2"
+HLTEle17Mass30Path13 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v3"
+HLTEle17Mass30Path14 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v4"
+HLTEle17Mass30Path15 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v5"
+HLTEle17Mass30Path16 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v6"
+HLTEle17Mass30Path17 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v7"
+HLTEle17Mass30Path18 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v8"
+HLTEle17Mass30Path19 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v9"
+HLTEle17Mass30Path20 = "HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass30_v10"
+
+
+HLTEle8Mass30Path1 = HLTEle17Mass30Path1
+HLTEle8Mass30Path2 = HLTEle17Mass30Path2
+HLTEle8Mass30Path3 = HLTEle17Mass30Path3
+HLTEle8Mass30Path4 = HLTEle17Mass30Path4
+HLTEle8Mass30Path5 = HLTEle17Mass30Path5
+HLTEle8Mass30Path6 = HLTEle17Mass30Path6
+HLTEle8Mass30Path7 = HLTEle17Mass30Path7
+HLTEle8Mass30Path8 = HLTEle17Mass30Path8
+HLTEle8Mass30Path9 = HLTEle17Mass30Path9
+HLTEle8Mass30Path10 = HLTEle17Mass30Path10
+HLTEle8Mass30Path11 = HLTEle17Mass30Path11
+HLTEle8Mass30Path12 = HLTEle17Mass30Path12
+HLTEle8Mass30Path13 = HLTEle17Mass30Path13
+HLTEle8Mass30Path14 = HLTEle17Mass30Path14
+HLTEle8Mass30Path15 = HLTEle17Mass30Path15
+HLTEle8Mass30Path16 = HLTEle17Mass30Path16
+HLTEle8Mass30Path17 = HLTEle17Mass30Path17
+HLTEle8Mass30Path18 = HLTEle17Mass30Path18
+HLTEle8Mass30Path19 = HLTEle17Mass30Path19
+HLTEle8Mass30Path20 = HLTEle17Mass30Path20
+
+nuetHLTEle17Mass30FilterSC8 = "hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC8TrackIsolFilter"
+nuetHLTEle8Mass30FilterSC8 =  "hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC8PMMassFilter"
+
+nuetHLTEle17Mass30FilterEle8 = "hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter"
+nuetHLTEle8Mass30FilterEle8 =  "hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8PMMassFilter"
+
+HLTEle32Path1  = "HLT_Ele32_CaloIdL_CaloIsoVL_SC17_v1"
+HLTEle32Path2  = "HLT_Ele32_CaloIdL_CaloIsoVL_SC17_v2"
+HLTEle32Path3  = "HLT_Ele32_CaloIdL_CaloIsoVL_SC17_v3"
+HLTEle32Path4  = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v1"
+HLTEle32Path5  = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v2"
+HLTEle32Path6  = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v3"
+HLTEle32Path7  = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v4"
+HLTEle32Path8  = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v5"
+HLTEle32Path9  = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v6"
+HLTEle32Path10 = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v7"
+HLTEle32Path11 = "HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_v8"
+
+HLTSC17Path1  = HLTEle32Path1
+HLTSC17Path2  = HLTEle32Path2
+HLTSC17Path3  = HLTEle32Path3
+HLTSC17Path4  = HLTEle32Path4
+HLTSC17Path5  = HLTEle32Path5
+HLTSC17Path6  = HLTEle32Path6
+HLTSC17Path7  = HLTEle32Path7
+HLTSC17Path8  = HLTEle32Path8
+HLTSC17Path9  = HLTEle32Path9
+HLTSC17Path10 = HLTEle32Path10
+HLTSC17Path11 = HLTEle32Path11
+
+nuetHltEle32Filter1 = "hltEle32CaloIdLCaloIsoVLSC17PixelMatchFilter"
+neutHltSC17Filter1 = "hltEle32CaloIdLCaloIsoVLSC17HEDoubleFilter"
+
+nuetHltEle32Filter = "hltEle32CaloIdTCaloIsoTTrkIdTTrkIsoTSC17TrackIsolFilter"
+neutHltSC17Filter =  "hltEle32CaloIdTCaloIsoTTrkIdTTrkIsoTSC17HEDoubleFilter"
+
+
+hltTagsPassingEle8Mass50HLTGsf = cms.VInputTag(
+    cms.InputTag(HLTEle8Mass30Path1, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path2, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path3, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path4, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path5, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path6, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path7, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path8, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path9, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path10, nuetHLTEle8Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path11, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path12, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path13, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path14, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path15, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path16, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path17, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path18, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path19, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle8Mass30Path20, nuetHLTEle8Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTSC17Path1,neutHltSC17Filter1, HLTProcessName),
+    cms.InputTag(HLTSC17Path2,neutHltSC17Filter1, HLTProcessName),
+    cms.InputTag(HLTSC17Path3,neutHltSC17Filter1, HLTProcessName),
+    cms.InputTag(HLTSC17Path4,neutHltSC17Filter, HLTProcessName),
+    cms.InputTag(HLTSC17Path5,neutHltSC17Filter,  HLTProcessName),
+    cms.InputTag(HLTSC17Path6,neutHltSC17Filter,  HLTProcessName),
+    cms.InputTag(HLTSC17Path7,neutHltSC17Filter,  HLTProcessName),
+    cms.InputTag(HLTSC17Path8,neutHltSC17Filter,  HLTProcessName),
+    cms.InputTag(HLTSC17Path9,neutHltSC17Filter,  HLTProcessName),
+    cms.InputTag(HLTSC17Path10,neutHltSC17Filter, HLTProcessName),
+    cms.InputTag(HLTSC17Path11,neutHltSC17Filter, HLTProcessName),
+     )
+
+hltTagsPassingEle17Mass50HLT =cms.VInputTag(
+    cms.InputTag(HLTEle17Mass30Path1,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path2,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path3,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path4,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path5,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path6,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path7,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path8,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path9,  nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path10, nuetHLTEle17Mass30FilterSC8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path11, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path12, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path13, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path14, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path15, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path16, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path17, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path18, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path19, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle17Mass30Path20, nuetHLTEle17Mass30FilterEle8, HLTProcessName),
+    cms.InputTag(HLTEle32Path1, nuetHltEle32Filter1, HLTProcessName),
+    cms.InputTag(HLTEle32Path2, nuetHltEle32Filter1, HLTProcessName),
+    cms.InputTag(HLTEle32Path3, nuetHltEle32Filter1, HLTProcessName),
+    cms.InputTag(HLTEle32Path4, nuetHltEle32Filter, HLTProcessName),
+    cms.InputTag(HLTEle32Path5, nuetHltEle32Filter, HLTProcessName),
+    cms.InputTag(HLTEle32Path6, nuetHltEle32Filter, HLTProcessName),
+    cms.InputTag(HLTEle32Path7, nuetHltEle32Filter, HLTProcessName),
+    cms.InputTag(HLTEle32Path8, nuetHltEle32Filter, HLTProcessName),
+    cms.InputTag(HLTEle32Path9, nuetHltEle32Filter, HLTProcessName),
+    cms.InputTag(HLTEle32Path10,nuetHltEle32Filter, HLTProcessName),
+    cms.InputTag(HLTEle32Path11,nuetHltEle32Filter, HLTProcessName)
+     )
+
+
+#######################################################################
+#TRIGGER TO BE TESTED                                                 #
+#######################################################################
+HLTEle17Path1 = "HLT_Ele17_CaloIdL_CaloIsoVL_Ele8_CaloIdL_CaloIsoVL_v1"
+HLTEle17Path2 = "HLT_Ele17_CaloIdL_CaloIsoVL_Ele8_CaloIdL_CaloIsoVL_v2"
+HLTEle17Path3 = "HLT_Ele17_CaloIdL_CaloIsoVL_Ele8_CaloIdL_CaloIsoVL_v3"
+HLTEle17Path4 = "HLT_Ele17_CaloIdL_CaloIsoVL_Ele8_CaloIdL_CaloIsoVL_v4"
+HLTEle17Path5 = "HLT_Ele17_CaloIdL_CaloIsoVL_Ele8_CaloIdL_CaloIsoVL_v5"
+HLTEle17Path6 = "HLT_Ele17_CaloIdL_CaloIsoVL_Ele8_CaloIdL_CaloIsoVL_v6"
+HLTEle17Path7 = "HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v6"
+HLTEle17Path8 = "HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7"
+HLTEle17Path9 = "HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v8"
+HLTEle17Path10 = "HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v9"
+HLTEle17Path11 = "HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v10"
+HLTEle8Path1 = HLTEle17Path1
+HLTEle8Path2 = HLTEle17Path2
+HLTEle8Path3 = HLTEle17Path3
+HLTEle8Path4 = HLTEle17Path4
+HLTEle8Path5 = HLTEle17Path5
+HLTEle8Path6 = HLTEle17Path6
+HLTEle8Path7 = HLTEle17Path7
+HLTEle8Path8 = HLTEle17Path8
+HLTEle8Path9 = HLTEle17Path9
+HLTEle8Path10 = HLTEle17Path10
+HLTEle8Path11 = HLTEle17Path11
+hltEle17Filter  = "hltEle17CaloIdLCaloIsoVLPixelMatchFilter"
+hltEle8Filter   = "hltEle17CaloIdIsoEle8CaloIdIsoPixelMatchDoubleFilter"
+hltEle17Filter7 = "hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsolFilter"
+hltEle8Filter7  = "hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsolDoubleFilter"
+
+
+hltTagsPassingEle17HLT= cms.VInputTag(
+    cms.InputTag(HLTEle17Path1,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path2,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path3,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path4,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path5,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path6,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path7,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path8,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path9,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path10,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path11,hltEle17Filter7, HLTProcessName),
+     )
+
+hltTagsPassingEle8HLT =cms.VInputTag(
+    cms.InputTag(HLTEle8Path1, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path2, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path3, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path4, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path5, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path6, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path7, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path8, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path9, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path10, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path11, hltEle8Filter7 , HLTProcessName),
+     )
+
+hltTagsPassingNotEle17HLT =cms.VInputTag(
+    cms.InputTag(HLTEle17Path1,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path2,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path3,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path4,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path5,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path6,hltEle17Filter,  HLTProcessName),
+    cms.InputTag(HLTEle17Path7,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path8,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path9,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path10,hltEle17Filter7, HLTProcessName),
+    cms.InputTag(HLTEle17Path11,hltEle17Filter7, HLTProcessName),
+     )
+hltTagsPassingEle8NotEle17HLT =cms.VInputTag(
+    cms.InputTag(HLTEle8Path1, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path2, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path3, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path4, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path5, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path6, hltEle8Filter ,  HLTProcessName),
+    cms.InputTag(HLTEle8Path7, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path8, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path9, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path10, hltEle8Filter7 , HLTProcessName),
+    cms.InputTag(HLTEle8Path11, hltEle8Filter7 , HLTProcessName),
+     )
+
+########################
+
+##    ___            _           _      
+##   |_ _|_ __   ___| |_   _  __| | ___ 
+##    | || '_ \ / __| | | | |/ _` |/ _ \
+##    | || | | | (__| | |_| | (_| |  __/
+##   |___|_| |_|\___|_|\__,_|\__,_|\___|
+##
+process.load('Configuration.StandardSequences.EndOfProcess_cff')
+process.load('Configuration.EventContent.EventContent_cff')
+
+process.load("TrackingTools/TransientTrack/TransientTrackBuilder_cfi")
+process.load("Configuration.StandardSequences.Geometry_cff")
+process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
+process.GlobalTag.globaltag = GLOBAL_TAG
+process.load("Configuration.StandardSequences.MagneticField_cff")
+process.load('FWCore.MessageService.MessageLogger_cfi')
+process.load("SimGeneral.HepPDTESSource.pythiapdt_cfi")
+process.options   = cms.untracked.PSet( wantSummary = cms.untracked.bool(False) )
+process.MessageLogger.cerr.threshold = ''
+process.MessageLogger.cerr.FwkReport.reportEvery = 1000
+
+##  |  _ \ ___   ___ | / ___|  ___  _   _ _ __ ___ ___ 
+##  | |_) / _ \ / _ \| \___ \ / _ \| | | | '__/ __/ _ \
+##  |  __/ (_) | (_) | |___) | (_) | |_| | | | (_|  __/
+##  |_|   \___/ \___/|_|____/ \___/ \__,_|_|  \___\___|
+##  
+process.source = cms.Source("PoolSource", 
+    fileNames = cms.untracked.vstring(
+#       $inputFileNames
+'file:/hdfs/store/data/Run2011A/DoubleElectron/AOD/08Nov2011-v1/0000/FE063ADC-BD1B-E111-8E7F-003048FFD7D4.root'
+                                                  ),
+#eventsToProcess = cms.untracked.VEventRange(
+#'193557:8215621',
+#'193557:35284992')
+)
+
+#if not MC_flag:
+import FWCore.PythonUtilities.LumiList as LumiList
+import FWCore.ParameterSet.Types as CfgTypes
+myLumis = LumiList.LumiList(filename = '/afs/hep.wisc.edu/home/anil79/CMSSW_4_4_4/src/PhysicsTools/TagAndProbe/test/excbadCert_160404-180252_7TeV_ReRecoNov08_Collisions11_JSON.txt').getCMSSWString().split(',')
+process.source.lumisToProcess = CfgTypes.untracked(CfgTypes.VLuminosityBlockRange())
+process.source.lumisToProcess.extend(myLumis)
+
+
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )    
+process.source.inputCommands = cms.untracked.vstring("keep *","drop *_MEtoEDMConverter_*_*")
+
+
+process.load('RecoJets.JetProducers.kt4PFJets_cfi')
+process.kt6PFJets = process.kt4PFJets.clone( rParam = 0.6, doRhoFastjet = True )
+process.kt6PFJets.Rho_EtaMax = cms.double(2.5)
+process.JetsForRho = cms.Sequence( process.kt6PFJets )
+
+## ==== Fast Filters ====
+process.goodVertexFilter = cms.EDFilter("VertexSelector",
+    src = cms.InputTag("offlinePrimaryVertices"),
+    cut = cms.string("!isFake && ndof > 4 && abs(z) <= 25 && position.Rho <= 2"),
+    filter = cms.bool(True),
+)
+process.noScraping = cms.EDFilter("FilterOutScraping",
+    applyfilter = cms.untracked.bool(True),
+    debugOn = cms.untracked.bool(False), ## Or 'True' to get some per-event info
+    numtrack = cms.untracked.uint32(10),
+    thresh = cms.untracked.double(0.25)
+)
+process.fastFilter = cms.Sequence(process.goodVertexFilter + process.noScraping)
+##    ____      __ _____ _           _                   
+##   / ___|___ / _| ____| | ___  ___| |_ _ __ ___  _ __  
+##  | |  _/ __| |_|  _| | |/ _ \/ __| __| '__/ _ \| '_ \ 
+##  | |_| \__ \  _| |___| |  __/ (__| |_| | | (_) | | | |
+##   \____|___/_| |_____|_|\___|\___|\__|_|  \___/|_| |_|
+##  
+#  GsfElectron ################ 
+
+process.eleIsoSequence = setupPFElectronIso(process, 'gsfElectrons')
+
+
+process.goodElectrons = cms.EDFilter("GsfElectronRefSelector",
+    src = cms.InputTag( ELECTRON_COLL ),
+    cut = cms.string( ELECTRON_CUTS )    
+)
+process.goodElectronsTAG = cms.EDFilter("GsfElectronRefSelector",
+    src = cms.InputTag( ELECTRON_COLL ),
+    cut = cms.string( "(abs(superCluster.eta)<2.5) && pt > 25.0" )
+)
+
+process.PassingEle8Mass50HLTGsf = cms.EDProducer("trgMatchedPatElectronProducer",    
+    InputProducer = cms.InputTag("goodElectrons" ),
+    isTriggerFilter = cms.untracked.bool(True),
+#    matchUnprescaledTriggerOnly = cms.untracked.bool(False),
+    hltTags = hltTagsPassingEle8Mass50HLTGsf,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)   
+)
+
+
+            
+
+##    _____ _           _                     ___    _ 
+##   | ____| | ___  ___| |_ _ __ ___  _ __   |_ _|__| |
+##   |  _| | |/ _ \/ __| __| '__/ _ \| '_ \   | |/ _` |
+##   | |___| |  __/ (__| |_| | | (_) | | | |  | | (_| |
+##   |_____|_|\___|\___|\__|_|  \___/|_| |_| |___\__,_|
+##   
+# Electron ID  ######
+
+process.PassingWPMedium = cms.EDProducer("ElectronCutBasedCandidateProducer",
+   ReferenceElectronCollection = cms.untracked.InputTag("goodElectrons"),
+   IsoDepElectron = cms.VInputTag(cms.InputTag('elPFIsoDepositChargedPFIso'),
+                                  cms.InputTag('elPFIsoDepositGammaPFIso'),
+                                  cms.InputTag('elPFIsoDepositNeutralPFIso')),
+   IsoValElectronPF = cms.VInputTag(cms.InputTag('elPFIsoValueCharged03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueGamma03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueNeutral03PFIdPFIso')),
+   conversionsInputTag     = cms.InputTag("allConversions"),
+   beamSpotInputTag        = cms.InputTag("offlineBeamSpot"),
+   rhoIsoInputTag          = cms.InputTag("kt6PFJets", "rho"),
+   primaryVertexInputTag   = cms.InputTag("offlinePrimaryVertices"),
+   nameIDBOOL = cms.string('medium'),
+)
+#///meri bari
+process.PassingWPTight = cms.EDProducer("ElectronCutBasedCandidateProducer",
+   ReferenceElectronCollection = cms.untracked.InputTag("goodElectrons"),
+   IsoDepElectron = cms.VInputTag(cms.InputTag('elPFIsoDepositChargedPFIso'),
+                                  cms.InputTag('elPFIsoDepositGammaPFIso'),
+                                  cms.InputTag('elPFIsoDepositNeutralPFIso')),
+   IsoValElectronPF = cms.VInputTag(cms.InputTag('elPFIsoValueCharged03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueGamma03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueNeutral03PFIdPFIso')),
+   conversionsInputTag     = cms.InputTag("allConversions"),
+   beamSpotInputTag        = cms.InputTag("offlineBeamSpot"),
+   rhoIsoInputTag          = cms.InputTag("kt6PFJets", "rho"),
+   primaryVertexInputTag   = cms.InputTag("offlinePrimaryVertices"),
+   nameIDBOOL = cms.string('tight'),
+)
+process.PassingWPTightTAG = cms.EDProducer("ElectronCutBasedCandidateProducer",
+   ReferenceElectronCollection = cms.untracked.InputTag("goodElectronsTAG"),
+   IsoDepElectron = cms.VInputTag(cms.InputTag('elPFIsoDepositChargedPFIso'),
+                                  cms.InputTag('elPFIsoDepositGammaPFIso'),
+                                  cms.InputTag('elPFIsoDepositNeutralPFIso')),
+   IsoValElectronPF = cms.VInputTag(cms.InputTag('elPFIsoValueCharged03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueGamma03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueNeutral03PFIdPFIso')),
+   conversionsInputTag     = cms.InputTag("allConversions"),
+   beamSpotInputTag        = cms.InputTag("offlineBeamSpot"),
+   rhoIsoInputTag          = cms.InputTag("kt6PFJets", "rho"),
+   primaryVertexInputTag   = cms.InputTag("offlinePrimaryVertices"),
+   nameIDBOOL = cms.string('tight'),
+)
+
+process.PassingWPLoose = cms.EDProducer("ElectronCutBasedCandidateProducer",
+   ReferenceElectronCollection = cms.untracked.InputTag("goodElectrons"),
+   IsoDepElectron = cms.VInputTag(cms.InputTag('elPFIsoDepositChargedPFIso'),
+                                  cms.InputTag('elPFIsoDepositGammaPFIso'),
+                                  cms.InputTag('elPFIsoDepositNeutralPFIso')),
+   IsoValElectronPF = cms.VInputTag(cms.InputTag('elPFIsoValueCharged03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueGamma03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueNeutral03PFIdPFIso')),
+   conversionsInputTag     = cms.InputTag("allConversions"),
+   beamSpotInputTag        = cms.InputTag("offlineBeamSpot"),
+   rhoIsoInputTag          = cms.InputTag("kt6PFJets", "rho"),
+   primaryVertexInputTag   = cms.InputTag("offlinePrimaryVertices"),
+   nameIDBOOL = cms.string('loose'),
+)
+process.PassingWPVeto = cms.EDProducer("ElectronCutBasedCandidateProducer",
+   ReferenceElectronCollection = cms.untracked.InputTag("goodElectrons"),
+   IsoDepElectron = cms.VInputTag(cms.InputTag('elPFIsoDepositChargedPFIso'),
+                                  cms.InputTag('elPFIsoDepositGammaPFIso'),
+                                  cms.InputTag('elPFIsoDepositNeutralPFIso')),
+   IsoValElectronPF = cms.VInputTag(cms.InputTag('elPFIsoValueCharged03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueGamma03PFIdPFIso'),
+                                    cms.InputTag('elPFIsoValueNeutral03PFIdPFIso')),
+   conversionsInputTag     = cms.InputTag("allConversions"),
+   beamSpotInputTag        = cms.InputTag("offlineBeamSpot"),
+   rhoIsoInputTag          = cms.InputTag("kt6PFJets", "rho"),
+   primaryVertexInputTag   = cms.InputTag("offlinePrimaryVertices"),
+   nameIDBOOL = cms.string('veto'),
+)
+#///ithe tak 
+##    _____     _                         __  __       _       _     _             
+##   |_   _| __(_) __ _  __ _  ___ _ __  |  \/  | __ _| |_ ___| |__ (_)_ __   __ _ 
+##     | || '__| |/ _` |/ _` |/ _ \ '__| | |\/| |/ _` | __/ __| '_ \| | '_ \ / _` |
+##     | || |  | | (_| | (_| |  __/ |    | |  | | (_| | || (__| | | | | | | | (_| |
+##     |_||_|  |_|\__, |\__, |\___|_|    |_|  |_|\__,_|\__\___|_| |_|_|_| |_|\__, |
+##                |___/ |___/                                                |___/ 
+##   
+# Trigger  ##################
+
+process.PassingEle17Mass50HLT = cms.EDProducer("trgMatchedGsfElectronProducer",    
+    InputProducer = cms.InputTag("PassingWPMedium" ),
+    isTriggerFilter = cms.untracked.bool(True),
+#    matchUnprescaledTriggerOnly = cms.untracked.bool(False),
+    hltTags = hltTagsPassingEle17Mass50HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)   
+)
+#meri bari
+process.PassingEle17Mass50HLTTight = cms.EDProducer("trgMatchedGsfElectronProducer",
+    InputProducer = cms.InputTag("PassingWPTight" ),
+    isTriggerFilter = cms.untracked.bool(True),
+#    matchUnprescaledTriggerOnly = cms.untracked.bool(False),
+    hltTags = hltTagsPassingEle17Mass50HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)
+)
+process.PassingEle17Mass50HLTTightTAG = cms.EDProducer("trgMatchedGsfElectronProducer",
+    InputProducer = cms.InputTag("PassingWPTightTAG" ),
+    isTriggerFilter = cms.untracked.bool(True),
+#    matchUnprescaledTriggerOnly = cms.untracked.bool(False),
+    hltTags = hltTagsPassingEle17Mass50HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)
+)
+
+process.PassingEle17Mass50HLTLoose = cms.EDProducer("trgMatchedGsfElectronProducer",
+    InputProducer = cms.InputTag("PassingWPLoose" ),
+    isTriggerFilter = cms.untracked.bool(True),
+#    matchUnprescaledTriggerOnly = cms.untracked.bool(False),
+    hltTags = hltTagsPassingEle17Mass50HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)
+)
+process.PassingEle17Mass50HLTVeto = cms.EDProducer("trgMatchedGsfElectronProducer",
+    InputProducer = cms.InputTag("PassingWPVeto" ),
+    isTriggerFilter = cms.untracked.bool(True),
+#    matchUnprescaledTriggerOnly = cms.untracked.bool(False),
+    hltTags = hltTagsPassingEle17Mass50HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)
+)
+#ithe tak
+
+
+
+process.PassingEle17HLT = cms.EDProducer("trgMatchedGsfElectronProducer",    
+    InputProducer = cms.InputTag("PassingWPMedium" ),
+    isTriggerFilter = cms.untracked.bool(True),
+    noHltFiring = cms.untracked.bool(True),
+    hltTags =hltTagsPassingEle17HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)   
+)
+
+process.PassingEle8HLT = cms.EDProducer("trgMatchedGsfElectronProducer",    
+    InputProducer = cms.InputTag("PassingWPMedium" ),
+    isTriggerFilter = cms.untracked.bool(True),
+    noHltFiring = cms.untracked.bool(True),
+    hltTags = hltTagsPassingEle8HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)   
+)
+process.PassingNotEle17HLT = cms.EDProducer("trgMatchedGsfElectronProducer",
+    InputProducer = cms.InputTag("PassingWPMedium" ),
+    isTriggerFilter = cms.untracked.bool(True),
+    noHltFiring = cms.untracked.bool(True),
+    antiSelect = cms.untracked.bool(True),
+    hltTags = hltTagsPassingNotEle17HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)
+)
+
+process.PassingEle8NotEle17HLT = cms.EDProducer("trgMatchedGsfElectronProducer",
+    InputProducer = cms.InputTag("PassingNotEle17HLT" ),
+    isTriggerFilter = cms.untracked.bool(True),
+    noHltFiring = cms.untracked.bool(True),
+    hltTags = hltTagsPassingEle8NotEle17HLT,
+    triggerEventTag = cms.untracked.InputTag("hltTriggerSummaryAOD","",HLTProcessName),
+    triggerResultsTag = cms.untracked.InputTag("TriggerResults","",HLTProcessName)
+)
+
+
+##    _____             ____        __ _       _ _   _             
+##   |_   _|_ _  __ _  |  _ \  ___ / _(_)_ __ (_) |_(_) ___  _ __  
+##     | |/ _` |/ _` | | | | |/ _ \ |_| | '_ \| | __| |/ _ \| '_ \ 
+##     | | (_| | (_| | | |_| |  __/  _| | | | | | |_| | (_) | | | |
+##     |_|\__,_|\__, | |____/ \___|_| |_|_| |_|_|\__|_|\___/|_| |_|
+##              |___/
+## 
+
+
+process.TagMedium = process.PassingEle17Mass50HLT.clone()
+process.TagTight = process.PassingEle17Mass50HLTTight.clone()
+process.TagLoose = process.PassingEle17Mass50HLTLoose.clone()
+process.TagVeto = process.PassingEle17Mass50HLTVeto.clone()
+process.TagMedium.InputProducer = cms.InputTag( "PassingWPMedium" )
+process.TagTight.InputProducer = cms.InputTag( "PassingWPTight" )
+process.TagLoose.InputProducer = cms.InputTag( "PassingWPLoose" )
+process.TagVeto.InputProducer = cms.InputTag( "PassingWPVeto" )
+
+process.ele_sequence = cms.Sequence(
+    process.pfParticleSelectionSequence + 
+    process.eleIsoSequence + 
+    process.goodElectrons +
+    process.goodElectronsTAG +
+    process.PassingEle8Mass50HLTGsf +
+    process.goodElectrons +
+    process.kt6PFJets *
+    process.PassingWPMedium +
+    process.PassingWPTight +
+    process.PassingWPTightTAG +
+    process.PassingWPLoose +
+    process.PassingWPVeto +
+    process.PassingEle17Mass50HLT +
+    process.PassingEle17Mass50HLTTight +
+    process.PassingEle17Mass50HLTTightTAG +
+    process.PassingEle17Mass50HLTLoose +
+    process.PassingEle17Mass50HLTVeto +
+    process.PassingEle17HLT +
+    process.PassingEle8HLT +
+    process.TagMedium +
+    process.TagTight +
+    process.TagLoose +
+    process.TagVeto 
+
+    )
+
+
+##    _____ ___   ____    ____       _          
+##   |_   _( _ ) |  _ \  |  _ \ __ _(_)_ __ ___ 
+##     | | / _ \/\ |_) | | |_) / _` | | '__/ __|
+##     | || (_>  <  __/  |  __/ (_| | | |  \__ \
+##     |_| \___/\/_|     |_|   \__,_|_|_|  |___/
+##                                              
+##   
+#  Tag & probe selection ######
+process.tagGsf = cms.EDProducer("CandViewShallowCloneCombiner",
+    decay = cms.string("PassingEle17Mass50HLT@+ goodElectrons@-"), # charge conjugate states are implied
+    checkCharge = cms.bool(True),                           
+    cut   = cms.string("40 < mass < 10000"),
+)
+
+process.Zsignal = process.tagGsf.clone()
+process.Zsignal.decay = cms.string("PassingEle17HLT PassingEle8HLT")
+
+process.tagTightGsf = process.tagGsf.clone()
+process.tagTightGsf.decay = cms.string("PassingEle17Mass50HLTTightTAG@+ goodElectrons@-")
+process.tagWPMedium = process.tagGsf.clone()
+process.tagWPMedium.decay = cms.string("PassingEle17Mass50HLTTightTAG@+ PassingWPMedium")
+
+process.allTagsAndProbes = cms.Sequence(
+    process.Zsignal +
+    process.tagGsf +
+    process.tagTightGsf+
+    process.tagWPMedium 
+)
+
+##    __  __  ____   __  __       _       _               
+##   |  \/  |/ ___| |  \/  | __ _| |_ ___| |__   ___  ___ 
+##   | |\/| | |     | |\/| |/ _` | __/ __| '_ \ / _ \/ __|
+##   | |  | | |___  | |  | | (_| | || (__| | | |  __/\__ \
+##   |_|  |_|\____| |_|  |_|\__,_|\__\___|_| |_|\___||___/
+##                                                        
+process.McMatchTag = cms.EDProducer("MCTruthDeltaRMatcherNew",
+    matchPDGId = cms.vint32(11),
+    src = cms.InputTag("TagTight"),
+    distMin = cms.double(0.2),
+    matched = cms.InputTag("genParticles"),
+    checkCharge = cms.bool(True)
+)
+process.McMatchGsf = process.McMatchTag.clone()
+process.McMatchGsf.src = cms.InputTag("goodElectrons")
+process.McMatchWPMedium = process.McMatchTag.clone()
+process.McMatchWPMedium.src = cms.InputTag("PassingWPMedium")
+    
+process.mc_sequence = cms.Sequence(
+   process.McMatchTag +
+   process.McMatchGsf + 
+   process.McMatchWPMedium 
+)
+
+############################################################################
+##    _____           _       _ ____            _            _   _  ____  ##
+##   |_   _|_ _  __ _( )_ __ ( )  _ \ _ __ ___ | |__   ___  | \ | |/ ___| ##
+##     | |/ _` |/ _` |/| '_ \|/| |_) | '__/ _ \| '_ \ / _ \ |  \| | |  _  ##
+##     | | (_| | (_| | | | | | |  __/| | | (_) | |_) |  __/ | |\  | |_| | ##
+##     |_|\__,_|\__, | |_| |_| |_|   |_|  \___/|_.__/ \___| |_| \_|\____| ##
+##              |___/                                                     ##
+##                                                                        ##
+############################################################################
+##    ____                      _     _           
+##   |  _ \ ___ _   _ ___  __ _| |__ | | ___  ___ 
+##   | |_) / _ \ | | / __|/ _` | '_ \| |/ _ \/ __|
+##   |  _ <  __/ |_| \__ \ (_| | |_) | |  __/\__ \
+##   |_| \_\___|\__,_|___/\__,_|_.__/|_|\___||___/
+##
+## I define some common variables for re-use later.
+## This will save us repeating the same code for each efficiency category
+ZVariablesToStore = cms.PSet(
+    eta = cms.string("eta"),
+    abseta = cms.string("abs(eta)"),
+    pt  = cms.string("pt"),
+    mass  = cms.string("mass"),
+)   
+
+ProbeVariablesToStore = cms.PSet(
+    probe_gsfEle_eta = cms.string("eta"),
+    probe_gsfEle_abseta = cms.string("abs(eta)"),
+    probe_gsfEle_pt  = cms.string("pt"),
+    probe_gsfEle_et  = cms.string("et"),
+    probe_gsfEle_e  = cms.string("energy"),
+    probe_gsfEle_q  = cms.string("charge"),
+  ## super cluster quantities
+    probe_sc_energy = cms.string("superCluster.energy"),
+    probe_sc_et    = cms.string("superCluster.energy*sin(superClusterPosition.theta)"),    
+    probe_sc_eta    = cms.string("superCluster.eta"),
+    probe_sc_abseta    = cms.string("abs(superCluster.eta)"),
+)
+
+
+TagVariablesToStore = cms.PSet(
+    gsfEle_eta = cms.string("eta"),
+    gsfEle_abseta = cms.string("abs(eta)"),
+    gsfEle_pt  = cms.string("pt"),
+    gsfEle_et  = cms.string("et"),
+    gsfEle_e  = cms.string("energy"),
+    gsfEle_q  = cms.string("charge"),
+    ## super cluster quantities
+    sc_energy = cms.string("superCluster.energy"),
+    sc_et     = cms.string("superCluster.energy*sin(superClusterPosition.theta)"),    
+    sc_eta    = cms.string("superCluster.eta"),
+    sc_abseta    = cms.string("abs(superCluster.eta)"),
+)
+
+CommonStuffForGsfElectronProbe = cms.PSet(
+    variables = cms.PSet(ProbeVariablesToStore),
+    ignoreExceptions =  cms.bool (False),
+    addRunLumiInfo   =  cms.bool (True),
+    addEventVariablesInfo   =  cms.bool (True),
+    pairVariables =  cms.PSet(ZVariablesToStore),
+    pairFlags     =  cms.PSet(
+          mass60to120 = cms.string("60 < mass < 120")
+    ),
+    tagVariables   =  cms.PSet(TagVariablesToStore),
+    tagFlags     =  cms.PSet(
+          passingGsf = cms.InputTag("goodElectrons"),
+          isWPMedium = cms.InputTag("PassingWPMedium"),
+          passingHLT = cms.InputTag("PassingEle17Mass50HLT"),     
+          isWPTight = cms.InputTag("PassingWPTight"),
+          passingHLTTight = cms.InputTag("PassingEle17Mass50HLTTight"),
+          isWPLoose = cms.InputTag("PassingWPLoose"),
+          passingHLTLoose = cms.InputTag("PassingEle17Mass50HLTLoose"),
+          isWPVeto = cms.InputTag("PassingWPVeto"),
+          passingHLTVeto = cms.InputTag("PassingEle17Mass50HLTVeto"),
+    ),    
+)
+
+CommonStuffForSuperClusterProbe = CommonStuffForGsfElectronProbe.clone()
+CommonStuffForSuperClusterProbe.variables = cms.PSet(
+    probe_eta = cms.string("eta"),
+    probe_abseta = cms.string("abs(eta)"),
+    probe_pt  = cms.string("pt"),
+    probe_et  = cms.string("et"),
+    probe_e  = cms.string("energy"),
+    )
+
+
+if MC_flag:
+    mcTruthCommonStuff = cms.PSet(
+        isMC = cms.bool(True),
+        tagMatches = cms.InputTag("McMatchTag"),
+        motherPdgId = cms.vint32(22,23),
+        makeMCUnbiasTree = cms.bool(MC_flag),
+        checkMotherInUnbiasEff = cms.bool(MC_flag),
+        mcVariables = cms.PSet(
+        probe_eta = cms.string("eta"),
+        probe_abseta = cms.string("abs(eta)"),
+        probe_pt  = cms.string("pt"),
+        probe_et  = cms.string("et"),
+        probe_e  = cms.string("energy"),
+        probe_mass  = cms.string("mass"),
+        ),
+        mcFlags     =  cms.PSet(
+        probe_flag = cms.string("pt>0")
+        ),      
+        )
+else:
+     mcTruthCommonStuff = cms.PSet(
+         isMC = cms.bool(False)
+         )
+
+
+##   ____      __       __    ___                 ___    _ 
+##  / ___|___ / _|      \ \  |_ _|___  ___       |_ _|__| |
+## | |  _/ __| |_   _____\ \  | |/ __|/ _ \       | |/ _` |
+## | |_| \__ \  _| |_____/ /  | |\__ \ (_) |  _   | | (_| |
+##  \____|___/_|        /_/  |___|___/\___/  ( ) |___\__,_|
+##                                           |/            
+##  gsf electron --> isolation, electron id  etc.
+process.GsfElectronToIdMedium = cms.EDAnalyzer("TagProbeFitTreeProducer",
+#    CommonStuffForSuperClusterProbe, mcTruthCommonStuff,
+    mcTruthCommonStuff, CommonStuffForGsfElectronProbe,
+    tagProbePairs = cms.InputTag("tagTightGsf"),
+    arbitration   = cms.string("None"),
+    flags = cms.PSet(
+#        probe_isWP95 = cms.InputTag("WP95MatchedSuperClusterCandsClean"),
+        probe_isWPMedium = cms.InputTag("PassingWPMedium"),
+    ),
+    probeMatches  = cms.InputTag("McMatchGsf"),
+#    allProbes     = cms.InputTag("PassingEle8Mass50HLTGsf")
+    allProbes     = cms.InputTag("goodElectrons")
+)
+
+process.GsfElectronToIdTight = cms.EDAnalyzer("TagProbeFitTreeProducer",
+    mcTruthCommonStuff, CommonStuffForGsfElectronProbe,
+    tagProbePairs = cms.InputTag("tagTightGsf"),
+    arbitration   = cms.string("None"),
+    flags = cms.PSet(
+        probe_isWPTight = cms.InputTag("PassingWPTight"),
+    ),
+    probeMatches  = cms.InputTag("McMatchGsf"),
+    allProbes     = cms.InputTag("goodElectrons")
+)
+process.GsfElectronToIdLoose = cms.EDAnalyzer("TagProbeFitTreeProducer",
+    mcTruthCommonStuff, CommonStuffForGsfElectronProbe,
+    tagProbePairs = cms.InputTag("tagTightGsf"),
+    arbitration   = cms.string("None"),
+    flags = cms.PSet(
+        probe_isWPLoose = cms.InputTag("PassingWPLoose"),
+    ),
+    probeMatches  = cms.InputTag("McMatchGsf"),
+    allProbes     = cms.InputTag("goodElectrons")
+)
+process.GsfElectronToIdVeto = cms.EDAnalyzer("TagProbeFitTreeProducer",
+    mcTruthCommonStuff, CommonStuffForGsfElectronProbe,
+    tagProbePairs = cms.InputTag("tagTightGsf"),
+    arbitration   = cms.string("None"),
+    flags = cms.PSet(
+        probe_isWPVeto = cms.InputTag("PassingWPVeto"),
+    ),
+    probeMatches  = cms.InputTag("McMatchGsf"),
+    allProbes     = cms.InputTag("goodElectrons")
+)
+
+process.Zsignalcounter = cms.EDAnalyzer("TagProbeFitTreeProducer",
+#    CommonStuffForSuperClusterProbe, mcTruthCommonStuff,
+    mcTruthCommonStuff, CommonStuffForGsfElectronProbe,
+    tagProbePairs = cms.InputTag("Zsignal"),
+    arbitration   = cms.string("OnePair"),
+    flags = cms.PSet(
+#        probe_isWP95 = cms.InputTag("WP95MatchedSuperClusterCandsClean"),
+        probe_isWPMedium = cms.InputTag("PassingWPMedium"),
+    ),
+    probeMatches  = cms.InputTag("McMatchGsf"),
+#    allProbes     = cms.InputTag("PassingEle8Mass50HLTGsf")
+    allProbes     = cms.InputTag("PassingWPMedium")
+)
+
+##    ___    _       __    _   _ _   _____ 
+##   |_ _|__| |      \ \  | | | | | |_   _|
+##    | |/ _` |  _____\ \ | |_| | |   | |  
+##    | | (_| | |_____/ / |  _  | |___| |  
+##   |___\__,_|      /_/  |_| |_|_____|_|
+##
+##  offline selection --> HLT. First specify which quantities to store in the TP tree. 
+##  WPMedium --> HLTEle17
+if MC_flag:
+    HLTmcTruthCommonStuff = cms.PSet(
+        isMC = cms.bool(MC_flag),
+        tagMatches = cms.InputTag("McMatchTag"),
+        motherPdgId = cms.vint32(22,23),
+        makeMCUnbiasTree = cms.bool(MC_flag),
+        checkMotherInUnbiasEff = cms.bool(MC_flag),
+        mcVariables = cms.PSet(
+          probe_eta = cms.string("eta"),
+          probe_abseta = cms.string("abs(eta)"),
+          probe_phi  = cms.string("phi"),
+          probe_et  = cms.string("et"),
+          probe_charge = cms.string("charge"),
+        ),
+        mcFlags     =  cms.PSet(
+          probe_flag = cms.string("pt>0")
+        ),
+        )
+else:
+     HLTmcTruthCommonStuff = cms.PSet(
+         isMC = cms.bool(False)
+         )
+
+process.WPMediumToHLTEle17 = cms.EDAnalyzer("TagProbeFitTreeProducer",
+    HLTmcTruthCommonStuff,
+    variables = cms.PSet(
+      probe_gsfEle_eta = cms.string("eta"),
+      probe_gsfEle_abseta = cms.string("abs(eta)"),
+      probe_gsfEle_et  = cms.string("et"),
+      probe_sc_et    = cms.string("superCluster.energy*sin(superClusterPosition.theta)"),
+      probe_sc_eta    = cms.string("superCluster.eta"),
+      probe_sc_abseta    = cms.string("abs(superCluster.eta)"),
+    ),
+    ignoreExceptions =  cms.bool (False),
+    addRunLumiInfo   =  cms.bool (True),
+    addEventVariablesInfo   =  cms.bool (True),
+    tagProbePairs = cms.InputTag("tagTightGsf"),
+    arbitration   = cms.string("None"),
+    flags = cms.PSet(
+        probe_passingHLT = cms.InputTag("PassingEle17HLT")
+    ),
+    probeMatches  = cms.InputTag("McMatchWPMedium"),
+    allProbes     = cms.InputTag("PassingWPMedium")
+)
+
+##  WPMedium --> HLTEle8NotEle17
+process.WPMediumToHLTEle8NotEle17 = process.WPMediumToHLTEle17.clone()
+process.WPMediumToHLTEle8NotEle17.tagProbePairs = cms.InputTag("tagWPMedium")
+process.WPMediumToHLTEle8NotEle17.probeMatches  = cms.InputTag("McMatchWPMedium")
+process.WPMediumToHLTEle8NotEle17.allProbes     = cms.InputTag("PassingWPMedium")
+process.WPMediumToHLTEle8NotEle17.flags =cms.PSet(
+        probe_passingHLT = cms.InputTag("PassingEle8NotEle17HLT")
+    )
+
+
+
+process.tree_sequence = cms.Sequence(
+    process.GsfElectronToIdMedium +
+    process.GsfElectronToIdTight +
+    process.GsfElectronToIdLoose +
+    process.GsfElectronToIdVeto +
+    process.Zsignalcounter
+)    
+
+##    ____       _   _     
+##   |  _ \ __ _| |_| |__  
+##   | |_) / _` | __| '_ \ 
+##   |  __/ (_| | |_| | | |
+##   |_|   \__,_|\__|_| |_|
+##
+process.out = cms.OutputModule("PoolOutputModule", 
+       fileName = cms.untracked.string("PFEE.root"),
+       SelectEvents = cms.untracked.PSet( 
+       SelectEvents = cms.vstring("p")
+       )
+    )
+process.outpath = cms.EndPath(process.out)
+process.outpath.remove(process.out)
+
+process.p = cms.Path(
+        process.fastFilter+
+        process.ele_sequence + 
+        process.allTagsAndProbes +
+        process.tree_sequence
+        )
+    
+process.TFileService = cms.Service(
+    "TFileService", fileName = cms.string( OUTPUT_FILE_NAME )
+#    "TFileService", fileName = cms.string( '$outputFileName') 
+)

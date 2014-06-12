@@ -1,0 +1,19 @@
+farmoutAnalysisJobs --skip-existing-output --save-failed-datafiles --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2011A-May10ReReco-v1/AOD 2011ElecTnPTree_DoubleElectronMay10ReReco_Jul27 ~/CMSSW_4_4_4/ ~/CMSSW_4_4_4/src/PhysicsTools/TagAndProbe/test/fortests.py
+1589
+
+farmoutAnalysisJobs --skip-existing-output --save-failed-datafiles --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2011A-PromptReco-v4/AOD 2011ElecTnPTree_DoubleElectronPromptReco-v4_Jul27 ~/CMSSW_4_4_4/ ~/CMSSW_4_4_4/src/PhysicsTools/TagAndProbe/test/fortests.py
+1254 job(s) submitted to cluster 3418442.
+
+farmoutAnalysisJobs --skip-existing-output --save-failed-datafiles --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2011A-05Aug2011-v1/AOD 2011ElecTnPTree_DoubleElectron05Aug_Jul27 ~/CMSSW_4_4_4/ ~/CMSSW_4_4_4/src/PhysicsTools/TagAndProbe/test/fortests.py
+289 job(s) submitted to cluster 3418443.
+
+farmoutAnalysisJobs --skip-existing-output --save-failed-datafiles --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2011A-03Oct2011-v1/AOD 2011ElecTnPTree_DoubleElectron03Oct_Jul27 ~/CMSSW_4_4_4/ ~/CMSSW_4_4_4/src/PhysicsTools/TagAndProbe/test/fortests.py
+309 job(s) submitted to cluster 3418444.
+
+farmoutAnalysisJobs --skip-existing-output --save-failed-datafiles --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2011B-PromptReco-v1/AOD  2011ElecTnPTree_DoubleElectronPromptReco-v1_2011B_Jul27 ~/CMSSW_4_4_4/ ~/CMSSW_4_4_4/src/PhysicsTools/TagAndProbe/test/fortests.py
+1144 job(s) submitted to cluster 3418445.
+
+farmoutAnalysisJobs --skip-existing-output --save-failed-datafiles --input-files-per-job=1 --input-dbs-path=/DYToEE_M-20_CT10_TuneZ2_7TeV-powheg-pythia/Fall11-PU_S6_START44_V9B-v1/AODSIM 2011ElecTnPTree_DYToEEFall11POWHEG_Jul27 ~/CMSSW_4_4_4/ ~/CMSSW_4_4_4/src/PhysicsTools/TagAndProbe/test/MCfortests.py
+1732 job(s) submitted to cluster 3418446.
+
+

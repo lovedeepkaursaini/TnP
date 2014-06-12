@@ -1,0 +1,168 @@
+121121_233606: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -create
+121121_234715: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -create
+121121_234906: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -submit 1-10 -c TnPElec_DYJets_Nov21/
+121122_022937: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPElec_DYJets_Nov21/
+121122_023418: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPElec_DYJets_Nov21/
+121122_023931: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPElec_DYJets_Nov21/
+121122_024314: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -create
+121122_024519: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -create
+121122_024601: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -create
+121122_024749: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -submit 1-2 -c TnPTreeElec_DYJets_Nov21/
+121122_025533: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPElec_DYJets_Nov21/
+121122_025813: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -getoutput 1-6,8-10 -c TnPElec_DYJets_Nov21/
+121122_030249: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121122_032332: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121122_034941: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -submit 2-500 -c TnPTreeElec_DYJets_Nov21/
+121123_013415: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_015006: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -forceResubmit 3-9,15-20,22-93,123-124,128,140-141,264,268,270,273-274,276-277,279,281-282,288,290,379-473 -c TnPTreeElec_DYJets_Nov21/
+121123_015715: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -resubmit 292 -c TnPTreeElec_DYJets_Nov21/
+121123_071018: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_080543: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_082156: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -kill 3-9,15-20,22-93,123-124,128,140-141,264,268,270,273-274,276-277,279,281-282,288,290,292,379-473 -c TnPTreeElec_DYJets_Nov21/
+121123_085358: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -resubmit 3-9,15-20,22-93,123-124,128,140-141,264,268,270,273-274,276-277,279,281-282,288,290,292,379-473 -c TnPTreeElec_DYJets_Nov21/
+121123_092036: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_093541: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_094901: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_105223: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_185152: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_190325: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -forceResubmit 3-6,8-9,17-19,22,24-93,123-124,128,140-141,264,268,270,273-274,276-277,279,281-282,288,290,292,379-415,417-433,435-473,7,416,434 -c TnPTreeElec_DYJets_Nov21/
+121123_192705: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_194907: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_195705: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_203233: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status -c TnPTreeElec_DYJets_Nov21/
+121123_203816: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -create
+121123_204503: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -submit
+121123_230753: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status
+121124_030603: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status
+121124_221323: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status
+121124_221807: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -kill 72,272,338
+121124_221945: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -resubmit 72,272,338
+121124_233725: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_3/python/crab.py -status
+130204_112802: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -create
+130204_113536: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c TnPTreeElec_WJetsToLNu_Feb4
+130204_120839: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130204_124040: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130204_215712: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130204_221144: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130204_222026: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -create
+130204_223408: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit
+130204_224052: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c crab_0_130204_222026
+130204_224717: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026
+130204_225508: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026
+130204_230052: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026
+130204_230249: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026
+130205_000131: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026/
+130205_000307: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130205_000756: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -getoutput 1-7 -c TnPTreeElec_WJetsToLNu_Feb4/
+130205_010903: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130205_012520: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026/
+130205_013812: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026/
+130205_014041: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -getoutput -c crab_0_130204_222026/
+130205_014211: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130204_222026/
+130205_124753: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -create
+130205_125731: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c crab_0_130205_124753/
+130205_130150: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c crab_0_130205_124753/
+130205_130830: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130205_124753/
+130206_012657: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130205_124753/
+130206_013107: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit -c crab_0_130205_124753/
+130206_013314: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 1 -c crab_0_130205_124753/
+130206_014630: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130205_124753/
+130206_015740: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130205_124753/
+130206_020906: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -create
+130206_021428: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c crab_0_130206_020906/
+130206_024557: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_025056: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_030640: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_034402: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_034831: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_035033: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_035717: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_045108: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_045745: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_045855: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_050323: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_050940: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_054540: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_054649: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c crab_0_130206_020906/
+130206_062239: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_062618: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -getoutput 10-32 -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_062948: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_063631: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_063802: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_063829: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_063855: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_064018: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_064109: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_064133: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_064856: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_072937: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_073113: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_073254: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_073601: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_080412: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.user_remote_dir=/hdfs/store/user/lovedeep/QCD/QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_081053: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_085413: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_094457: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_095101: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_102845: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_105933: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_110714: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_120413: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_120711: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_123120: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.user_remote_dir=QCD/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_123436: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130206_210512: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_211017: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -submit -c QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6
+130206_211427: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_211554: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_211620: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -create -CMSSW.datasetpath=/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130206_214209: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -submit -c=QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.ui_working_dir=QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -CMSSW.datasetpath=/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130206_214237: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -submit -c=QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.ui_working_dir=QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -CMSSW.datasetpath=/QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130206_214254: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -submit -c=QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.ui_working_dir=QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -CMSSW.datasetpath=/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130206_214310: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -submit -c=QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -USER.ui_working_dir=QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6 -CMSSW.datasetpath=/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130207_005112: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_005301: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_005635: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_011542: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_011729: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_050254: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130207_051434: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_062425: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c TnPTreeElec_WJetsToLNu_Feb4/
+130207_062921: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 86 -c TnPTreeElec_WJetsToLNu_Feb4/
+130207_064332: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_064730: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_064818: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_065244: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_065407: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -kill -c QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_065657: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -kill all -c QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_073837: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130207_101209: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -create -CMSSW.datasetpath=/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130207_101356: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -create -CMSSW.datasetpath=/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130207_101419: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -create -CMSSW.datasetpath=/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130207_101442: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.ui_working_dir=QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -create -CMSSW.datasetpath=/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM -cfg=crab.cfg
+130207_102056: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -submit -c=QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.ui_working_dir=QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -CMSSW.datasetpath=/QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130207_102138: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -submit -c=QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.ui_working_dir=QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -CMSSW.datasetpath=/QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130207_102152: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -submit -c=QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.ui_working_dir=QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -CMSSW.datasetpath=/QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130207_102205: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -USER.user_remote_dir=TnPTreeElec_WJetsToLNu_Feb6/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -submit -c=QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -USER.ui_working_dir=QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7 -CMSSW.datasetpath=/QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6/Summer12_DR53X-PU_S10_START53_V7A-v1/AODSIM
+130208_090051: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130208_090142: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130208_090322: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130208_092550: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130208_093403: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130210_105453: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130210_105808: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_30_80_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130210_105826: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110015: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 1-4,7,9-10 -c QCD_Pt_80_170_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110203: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110301: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 6-8 -c QCD_Pt_170_250_BCtoE_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110318: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_20_30_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130210_110359: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110633: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 77,4,7,82,97,118,124,1,3,6,8-10,14-15,68-69,72-73,78,81,92,98-99,101,103-104,106-107,109,112,114-116,119-120,122,126,150,147,2,11,13,16-17,19-20,22,24-31,33-36,38-41,43-65,67,71,74-76,79-80,83,85-86,88-89,91,94-96,102,108,110-111,113,121,125,129-134,136,138-139,142-146,149,151-159,161-163,166-170,100 -c QCD_Pt_30_80_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110721: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110856: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 116,128,1,6,9,17,29,31-46,50-51,54-56,59-63,67-69,71-78,99,102,108,110-115,117-120,122-124,126-127,129-130,156-160,162-174,178,47-49,52-53,64-66,70,87-89,92-93,176 -c QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130210_110955: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130210_111138: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 89 -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130211_023841: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130211_024024: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 89 -c QCD_Pt_170_250_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb6/
+130211_032038: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -status -c QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/
+130211_032310: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_8_5_patch1/python/crab.py -forceResubmit 1,6,9,17,29,31-34,36-40,42-43,46,50-51,54-55,59,61,68,73,75-77,102,108,110-113,115-118,120,122,124,126,128,130,159-160,162,164-167,170-171,173-174,178 -c QCD_Pt_80_170_EMEnriched_TuneZ2star_8TeV_pythia6_Summer12_DR53X_Feb7/

@@ -1,0 +1,1 @@
+rootplot madgraph_Medium.root mcTruemadgraph_Medium.root mcTruemadgraph_TauRemoved1p0Medium.root --legend-entries='Madgraph, mcTrue Madgraph, mcTrue-TauRemoved dR<1.0' --draw='hist'

@@ -1,0 +1,24 @@
+[
+Type = "collection";
+Nodes = {
+[
+NodeName   = "NodeName_lovedeep_crab_0_130205_124753_w12bd4_job1";
+Executable = "CMSSW.sh";
+Arguments  = "1 1";
+StdOutput  = "CMSSW_1.stdout";
+StdError   = "CMSSW_1.stderr";
+OutputSandbox = {"out_files_1.tgz","crab_fjr_1.xml"};
+InputSandbox = {root.inputsandbox[0],root.inputsandbox[1],root.inputsandbox[2]};
+]
+};
+InputSandbox = {"file:///afs/hep.wisc.edu/user/kaur/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/crab_0_130205_124753/share/default.tgz","file:///afs/hep.wisc.edu/user/kaur/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/crab_0_130205_124753/share/arguments.xml","file:///afs/hep.wisc.edu/user/kaur/TnP/CMSSW_5_3_5/src/PhysicsTools/TagAndProbe/test/crab_0_130205_124753/job/CMSSW.sh"};
+
+Requirements = Member("VO-cms-CMSSW_5_3_5", other.GlueHostApplicationSoftwareRunTimeEnvironment) && Member("VO-cms-slc5_amd64_gcc462", other.GlueHostApplicationSoftwareRunTimeEnvironment) && (other.GlueHostNetworkAdapterOutboundIP) && other.GlueCEStateStatus == "Production"  &&  other.GlueCEPolicyMaxCPUTime>=130 && ( Member("srm.ciemat.es" , other.GlueCESEBindGroupSEUniqueID) || Member("storm-se-01.ba.infn.it" , other.GlueCESEBindGroupSEUniqueID) || Member("t2-srm-02.lnl.infn.it" , other.GlueCESEBindGroupSEUniqueID) || Member("cmsdca2.fnal.gov" , other.GlueCESEBindGroupSEUniqueID) || Member("dcache-se-cms.desy.de" , other.GlueCESEBindGroupSEUniqueID) || Member("ganymede.hep.kbfi.ee" , other.GlueCESEBindGroupSEUniqueID) )  && ((!RegExp("cmsosgce4.fnal.gov", other.GlueCEUniqueId))&&(!RegExp("cream04.grid.sinica.edu.tw", other.GlueCEUniqueId))&&(!RegExp("lcgce10.gridpp.rl.ac.uk", other.GlueCEUniqueId))&&(!RegExp("ce08.pic.es", other.GlueCEUniqueId))&&(!RegExp("saxon.hosted.ats.ucla.edu", other.GlueCEUniqueId))&&(!RegExp("cmsosgce.fnal.gov", other.GlueCEUniqueId))&&(!RegExp("cream-ge-1-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("cream06.grid.sinica.edu.tw", other.GlueCEUniqueId))&&(!RegExp("cream-ge-3-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("ce09-lcg.cr.cnaf.infn.it", other.GlueCEUniqueId))&&(!RegExp("cmsosgce2.fnal.gov", other.GlueCEUniqueId))&&(!RegExp("cccreamceli05.in2p3.fr", other.GlueCEUniqueId))&&(!RegExp("ce10.pic.es", other.GlueCEUniqueId))&&(!RegExp("ce04-lcg.cr.cnaf.infn.it", other.GlueCEUniqueId))&&(!RegExp("ce07-lcg.cr.cnaf.infn.it", other.GlueCEUniqueId))&&(!RegExp("cream-ge-8-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("cream-ge-7-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("se2.accre.vanderbilt.edu", other.GlueCEUniqueId))&&(!RegExp("ce09.pic.es", other.GlueCEUniqueId))&&(!RegExp("lcgce11.gridpp.rl.ac.uk", other.GlueCEUniqueId))&&(!RegExp("cream-ge-5-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("lcgce02.gridpp.rl.ac.uk", other.GlueCEUniqueId))&&(!RegExp("ce06-lcg.cr.cnaf.infn.it", other.GlueCEUniqueId))&&(!RegExp("ce07.pic.es", other.GlueCEUniqueId))&&(!RegExp("cream05.grid.sinica.edu.tw", other.GlueCEUniqueId))&&(!RegExp("cream-ge-4-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("ce08-lcg.cr.cnaf.infn.it", other.GlueCEUniqueId))&&(!RegExp("cream-ge-2-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("cccreamceli06.in2p3.fr", other.GlueCEUniqueId))&&(!RegExp("cream-ge-6-kit.gridka.de", other.GlueCEUniqueId))&&(!RegExp("ce01-lcg.cr.cnaf.infn.it", other.GlueCEUniqueId))&&(!RegExp("ce05-lcg.cr.cnaf.infn.it", other.GlueCEUniqueId))) ;
+MyProxyServer = "myproxy.cern.ch";
+VirtualOrganisation = "cms";
+RetryCount = 0;
+DefaultNodeRetryCount = 0;
+ShallowRetryCount = -1;
+DefaultNodeShallowRetryCount = -1;
+SignificantAttributes = {"Requirements", "Rank", "FuzzyRank"};
+]

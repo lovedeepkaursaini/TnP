@@ -1,0 +1,372 @@
+.L SCtempMedium.C++
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.
+.
+.q
+.L SCtempMedium.C++
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.q
+.L SCtempMedium.C++
+SCtempMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/mrgdTnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraphSummer12_DR53X-PU_S10_START53_V7A-v1_June10.root")
+_file0.ls()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/mrgdTnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraphSummer12_DR53X-PU_S10_START53_V7A-v1_June10.root")
+_file0.ls()
+.q
+.q
+.L tempMedium.C++
+tempMedium l
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempLoose.C++
+tempLoose l
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/mrgdTnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraphSummer12_DR53X-PU_S10_START53_V7A-v1_June10.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdLoose")
+_file0.ls()
+fitter_tree->Print("toponly")
+.q
+.L tempLoose.C++
+tempLoose l
+l.Loop()
+.q
+.L tempVeto.C++
+tempVeto l
+l.Loop()
+.q
+.L tempTight.C++
+tempTight l
+l.Loop()
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L tempTight.C++
+tempTight l
+l.Loop()
+.q
+.L tempVeto.C++
+tempVeto l
+l.Loop()
+.q
+.L tempLoose.C++
+tempLoose l
+l.Loop()
+.q
+.L nPVMedium.C++
+.q
+.L tempMedium.C++
+tempMedium l
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.q
+.L tempMedium.C++
+tempMedium l
+.q
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+TFile *_file0 = TFile::Open("/scratch/kaur/mrgdTnPTreeElec_DYToEE_M-20_CT10_TuneZ2star_v2_8TeV-powheg-pythia6_Aug24.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->GetEntries()
+.q
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+TBrowser b
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+TBrowser b
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+TFile *_file0 = TFile::Open("madgraph_Medium.root")
+TBrowser b
+.q
+TBrowser b
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+.q
+.L tempMedium.C++
+tempMedium l
+.q
+.L tempMedium.C++
+tempMedium l
+.q
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempMedium.C++
+tempMedium l
+l.Loop()
+.q
+.L tempLoose.C++
+.q
+.L tempLoose.C++
+.q
+.L tempLoose.C++
+tempLoose l
+.q
+.L tempLoose.C++
+tempLoose l
+l.Loop()
+.q
+.L tempTight.C++
+tempTight l
+.q
+.q
+.L tempTight.C++
+tempTight l
+l.Loop()
+.q
+.L tempVeto.C++
+tempVeto l
+.q
+.L tempVeto.C++
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/mrgdTnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraphSummer12_DR53X-PU_S10_START53_V7A-v1_Sep5.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdVeto")
+_file0.ls()
+fitter_tree->GetEntries()
+fitter_tree->Print("toponly")
+.q
+.L tempVeto.C++
+tempVeto l
+l.Loop()
+.q
+.L nPVMedium.C++
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/mrgdTnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraphSummer12_DR53X-PU_S10_START53_V7A-v1_Sep5.root")
+_file0.ls()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/mrgdTnPTreeElec_DoubleElectronRun2012_June10.root")
+_file0.ls()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/mrgdTnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraphSummer12_DR53X-PU_S10_START53_V7A-v1_Sep5.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->Print("toponly")
+.q
+.L nPVMedium.C
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+.q
+.L tempMedium.C++
+.q
+.L tempMedium.C++
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+TFile *_file0 = TFile::Open("nPVMedium.root")
+_file0.ls()
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.L nPVMedium.C++
+nPVMedium l
+l.Loop()
+.q

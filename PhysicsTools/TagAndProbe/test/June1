@@ -1,0 +1,33 @@
+[kaur@login06 test]$ farmoutAnalysisJobs --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012D-22Jan2013-v1/AOD TnPTreeElec_DoubleElectronRun2012D-22Jan2013-v1_June1 ~/TnP/CMSSW_5_3_9/ ~/TnP/CMSSW_5_3_9/src/PhysicsTools/TagAndProbe/test/TnPNtupleRun2012.py 
+2539 job(s) submitted to cluster 6413925.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for TnPTreeElec_DoubleElectronRun2012D-22Jan2013-v1_June1 are created in /scratch/kaur/TnPTreeElec_DoubleElectronRun2012D-22Jan2013-v1_June1-TnPNtupleRun2012
+[kaur@login06 test]$ 
+[kaur@login06 test]$ farmoutAnalysisJobs --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012C-22Jan2013-v1/AOD TnPTreeElec_DoubleElectronRun2012C-22Jan2013-v1_June1 ~/TnP/CMSSW_5_3_9/ ~/TnP/CMSSW_5_3_9/src/PhysicsTools/TagAndProbe/test/TnPNtupleRun2012.py 
+2389 job(s) submitted to cluster 6413880.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for TnPTreeElec_DoubleElectronRun2012C-22Jan2013-v1_June1 are created in /scratch/kaur/TnPTreeElec_DoubleElectronRun2012C-22Jan2013-v1_June1-TnPNtupleRun2012
+[kaur@login06 test]$ 
+
+farmoutAnalysisJobs --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012B-22Jan2013-v1/AOD TnPTreeElec_DoubleElectronRun2012B-22Jan2013-v1_June1 ~/TnP/CMSSW_5_3_9/ ~/TnP/CMSSW_5_3_9/src/PhysicsTools/TagAndProbe/test/TnPNtupleRun2012.py 
+1643 job(s) submitted to cluster 6413814.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+
+[kaur@login06 test]$ farmoutAnalysisJobs --output-files-per-subdir=500 --input-files-per-job=1 --input-dbs-path=/DoubleElectron/Run2012A-22Jan2013-v1/AOD TnPTreeElec_DoubleElectronRun2012A-22Jan2013-v1_June1 ~/TnP/CMSSW_5_3_9/ ~/TnP/CMSSW_5_3_9/src/PhysicsTools/TagAndProbe/test/TnPNtupleRun2012.py 
+745 job(s) submitted to cluster 6412203.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for TnPTreeElec_DoubleElectronRun2012A-22Jan2013-v1_June1 are created in /scratch/kaur/TnPTreeElec_DoubleElectronRun2012A-22Jan2013-v1_June1-TnPNtupleRun2012
+[kaur@login06 test]$ 
+

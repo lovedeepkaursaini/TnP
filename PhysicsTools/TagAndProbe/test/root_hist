@@ -1,0 +1,267 @@
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+_file0.ls()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/TnPTreeElec_DoubleElectronRun2012A-22Jan2013-v1_May31-fortests2012AB/1/fortests2012AB-4A0C8B83-6470-E211-BBA0-003048679182.root")
+_file0.ls()
+_file0.cd("SuperClusterToGsfElectron")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/TnPTreeElec_DoubleElectronRun2012A-22Jan2013-v1_June1-TnPNtupleRun2012/1/TnPNtupleRun2012-FEAF0DFD-9667-E211-9A4E-0025905938A8.root")
+_file0.cd("SuperClusterToGsfElectron")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/lovedeep/TnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV_June7/TnPTree_Data_52_0_QOt.root")
+TFile *_file0 = TFile::Open("/hdfs/store/user/lovedeep/TnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV_June7/TnPTree_Data_52_0_QOt.root")
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+gROOT->Ls()
+gROOT->ls()
+ls
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0->ls()
+_file0->cd(GsfElectronToIdMedium)
+_file0->cd("GsfElectronToIdMedium")
+_file0->ls()
+_file0->lw("GsfElectronToIdMedium")
+_file0->ls("GsfElectronToIdMedium")
+_file0->ls("GsfElectronToIdMedium/")
+_file0->ls("GsfElectronToIdMedium/fitter_tree")
+_file0->Print("GsfElectronToIdMedium/fitter_tree")
+_file0->ls("fitter_tree")
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0->ls("fiter_tree")
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+_file0->ls("fiter_tree")
+fitter_tree->GetEntries()
+fitter_tree->Print("toponly")
+.q
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+_file0.cd("GsfElectronToIdVeto")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.cd("GsfElectronToIdVeto")
+fitter_tree->GetEntries()
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+.q
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->GetEntries()
+fitter_tree->Print("toponly")
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->Print("toponly")
+_file0.cd("GsfElectronToIdVeto")
+fitter_tree->Print("toponly")
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+TBrowser b
+.q
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+fitter_tree->Print("toponly")
+.q
+TBrowser b
+.q
+TBrowser b
+.q
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/kaur/TnPTreeElec_DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph_PUS10_Nov4-TnPNtuplesMC/1/TnPNtuplesMC-F246AEC5-04D4-E111-B216-001E673966B2.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+_file0.ls()
+.q
+TFile *_file0 = TFile::Open("/hdfs/store/user/lovedeep/TnPTreeElec_DoubleElectron_Run2012D-22Jan2013_Nov4/TnPTree_Data_30_1_i32.root")
+_file0.cd("GsfElectronToIdMedium")
+fitter_tree->GetEntries()
+fitter_tree->Print("toponly")
+.q
+TFile *_file0 = TFile::Open("TnPTree_Data.root")
+TBrowser b
+.q
+TFile *_file0 = TFile::Open("/scratch/kaur/Run2012CDoubleElectron22Jan2013-v12000278704EA6-AD68-E211-9272-0030486792AC.root")
+_file0.ls()
+Events->GetEntries()
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->Print()
+.q
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+ls
+.q
+TFile *_file0 = TFile::Open("mcTruemadgraph_Medium.root")
+_file0.ls()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+TFile *_file0 = TFile::Open("mcTruemadgraph_Medium.root")
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+TFile *_file0 = TFile::Open("TnPTree_MC.root")
+_file0.ls()
+_file0.cd("GsfElectronToIdMedium")
+_file0.ls()
+fitter_tree->GetEntries()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
+.L PlotEIDvar.C++
+PlotEIDvar l
+l.Loop()
+.q
